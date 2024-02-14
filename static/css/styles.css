@@ -90,7 +90,7 @@ body {
     display: block;
     color: black;
     font-size: 1.2rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     z-index: 2;
 
 }
@@ -224,7 +224,7 @@ body {
 
 .respUser #textoTitulo {
     position: relative;
-    margin-top: 320px;
+    margin-top: 360px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
@@ -254,16 +254,17 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     background-color: black;
-    display:inline-block;
+    display: inline-block;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
 
 }
-#btnDownload:hover{
+
+#btnDownload:hover {
     color: #020101;
     background-color: rgb(255, 6, 6);
-  
+
 }
 
 #btnImprimir {
@@ -277,20 +278,22 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     background-color: black;
-    display:inline-block;
+    display: inline-block;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
 
 }
-#btnImprimir:hover{
+
+#btnImprimir:hover {
     color: #020101;
     background-color: rgb(255, 6, 6);
-  
+
 }
 
 /*deixa os botoes invisiveis pra imprimir*/
 @media print {
+
     #btnDownload,
     #btnImprimir,
     #textoTitulo {
@@ -377,7 +380,7 @@ body {
         color: black;
         font-size: 1rem;
         z-index: 2;
-        
+
     }
 
     .inputs input[type="text"] {
@@ -436,19 +439,20 @@ body {
         text-align: center;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 1.5rem;
-    
+
     }
+
     #btnDownload {
         position: absolute;
         margin-left: -15px;
         width: 100px;
         padding: 10px;
     }
-   
-    
+
+
     #btnImprimir {
         position: absolute;
-        margin-left: 130px;
+        margin-left: 140px;
         width: 100px;
         padding: 10px;
     }
@@ -459,5 +463,14 @@ body {
         padding: 0%;
     }
 
+    /*deixa os botoes invisiveis pra imprimir*/
+    @media print {
+
+        #btnDownload,
+        #btnImprimir,
+        #textoTitulo {
+            display: none;
+        }
+    }
 
 }
