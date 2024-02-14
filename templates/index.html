@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Gerador de QRCold</title>
+</head>
+
+<body>
+    <form action="/index" id="index" method="post" enctype="multipart/form-data">
+        <div class="corpo">
+            <div class="mensagem">Por favor <span>aguarde...</span></div>
+            <img src="/static/img/biblioteca.png">
+            
+            <div class="corpoflex">
+                <img src="/static/img/qrcold2.png">
+                <div class="formDiv">
+                   
+                    <h4 class="titulo">Bem Vindos(as)</h4>
+                    <h4 class="subtitulo">Aqui você gerar seu QRCold do seu jeito!</h4>
+
+                    <div class="inputs">
+                        <label for="qrcold">Cole o link ou número para gerar o QRCold
+                            <input id="pergunta" name="qrcold" type="text" placeholder="link ou numero para gerar o QRCold">
+                        </label>
+                    </div>
+                    <button class="btn" type="submit">Gerar </button>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="/static/javascript/script.js"></script>
+</body>
+
+</html>
