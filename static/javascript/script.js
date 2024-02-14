@@ -1,23 +1,23 @@
 
+var downloadBtn = document.getElementById('btnDownload');
+var imprimirBtn = document.getElementById('btnImprimir');
 
-var btn = document.querySelector('.btn');
-const mensagem = document.querySelector('.mensagem');
-var span = document.querySelector('span');
+downloadBtn.addEventListener('click', function () {
+    var link = document.createElement('a');
+    link.download = 'qrcol_img.png';
+    link.href = '/static/qrcol_img.png';
+    console.log(link + "link")
+    link.click();
+});
 
-btn.addEventListener('click', () => {
-    digitar(span);
-})
+imprimirBtn.addEventListener('click', function () {
+    console.log("clicou")
+    window.print();
+});
 
-
-function digitar(span) {
-    mensagem.style.display = 'block';
-    let texto = span.innerHTML.split('');
-    span.innerHTML = '';
-    texto.forEach((letra, index) => {
-        setTimeout(() => {
-            mensagem.innerHTML += letra;
-        }, 300 * index)
-
-    });
-
-}
+//deixar os botoes visiveis aos a impressao
+window.onafterprint = function() {
+    document.getElementById("btnDownload").style.display = "block";
+    document.getElementById("btnImprimir").style.display = "block";
+    document.getElementById("textoTitulo").style.display = "block";
+};

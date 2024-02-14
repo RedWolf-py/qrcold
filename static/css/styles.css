@@ -29,7 +29,7 @@ body {
     width: 50%;
     height: 80%;
     backdrop-filter: blur(3px);
-    background-color: rgba(2, 0, 0, 0.4);
+    background-color: rgba(253, 249, 249, 0.603);
     border-radius: 10px;
 }
 
@@ -55,18 +55,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.raioLuz::before {
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 45%;
-    background-color: #f8f2f6;
-
-    transform: perspective(3px) rotateX(16deg) scale(0.5, 0.300);
-    filter: blur(3px);
-    opacity: 0.9;
-
-}
 
 .formDiv {
     margin-top: 25px;
@@ -78,7 +66,7 @@ body {
 }
 
 .titulo {
-    color: rgb(253, 252, 253);
+    color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -89,7 +77,7 @@ body {
 
 
 .subtitulo {
-    color: rgb(253, 252, 253);
+    color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(250, 246, 246, 0.5);
@@ -110,8 +98,9 @@ body {
 
 .inputs label {
     display: block;
-    color: rgb(245, 240, 240);
+    color: black;
     font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     z-index: 2;
 
 }
@@ -119,12 +108,11 @@ body {
 .inputs input[type="text"] {
     width: 100%;
     padding: 6px;
-    border: 2px solid #6b6060;
+    border: 2px solid #070404;
     border-radius: 5px;
     font-family: Arial, sans-serif;
 
 }
-
 
 
 
@@ -226,17 +214,27 @@ body {
 /*segundo html*/
 .subTexto {
     position: absolute;
-    margin-top: 22%;
+    margin-top: 20%;
     margin-left: 50%;
-    background-color: #faf7f7;
-    padding: 3px;
+    background-color: #ffffff;
+    padding: 1px;
     width: 90%;
-    height: 80%;
+    height: 90%;
     transform: translate(-50%, -50%);
 
 }
 
 .respUser h1 {
+    position: relative;
+    margin-top: -20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.respUser #textoTitulo {
+    position: relative;
+    margin-top: 320px;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
@@ -244,7 +242,7 @@ body {
 
 .respUser img {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -253,6 +251,61 @@ body {
     background-color: black;
     margin: 0%;
     padding: 0%;
+}
+
+#btnDownload {
+    position: relative;
+    margin-left: 250px;
+    width: 140px;
+    padding: 10px;
+    transform: translate(-50, -50);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: black;
+    display:inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+
+}
+#btnDownload:hover{
+    color: #020101;
+    background-color: rgb(255, 6, 6);
+  
+}
+
+#btnImprimir {
+    position: relative;
+    margin-left: 300px;
+    width: 140px;
+    padding: 10px;
+    transform: translate(-50, -50);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: black;
+    display:inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+
+}
+#btnImprimir:hover{
+    color: #020101;
+    background-color: rgb(255, 6, 6);
+  
+}
+
+/*deixa os botoes invisiveis pra imprimir*/
+@media print {
+    #btnDownload,
+    #btnImprimir,
+    #textoTitulo {
+        display: none;
+    }
 }
 
 
@@ -293,7 +346,7 @@ body {
         backdrop-filter: blur(4px);
         background-color: rgba(2, 0, 0, 0.5);
         border-radius: 10px;
-       
+
     }
 
 
@@ -370,17 +423,44 @@ body {
     }
 
     .respUser h1 {
+        position: relative;
+        margin-top: -40px;
         text-align: center;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5rem;
+        z-index: 2;
 
     }
 
     .respUser img {
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
+    }
+
+    .respUser #textoTitulo {
+        position: relative;
+        margin-top: 300px;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5rem;
+    
+    }
+    #btnDownload {
+        position: absolute;
+        margin-left: -15px;
+        width: 100px;
+        padding: 10px;
+    }
+   
+    
+    #btnImprimir {
+        position: absolute;
+        margin-left: 130px;
+        width: 100px;
+        padding: 10px;
     }
 
     body {
